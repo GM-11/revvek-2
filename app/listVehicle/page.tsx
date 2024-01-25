@@ -89,7 +89,7 @@ function Home() {
           ImgHash
         );
         await result.wait();
-        setMessage("Vehicle added successfully");
+        setMessage("Artwork added successfully");
       } catch (error) {
         console.log("Error sending File to IPFS: ");
         console.log(error);

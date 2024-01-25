@@ -93,8 +93,10 @@ function Home() {
               <Navbar address={address} />
 
               <div className="body">
+                <h1>Revvek</h1>
+                <br />
                 <h1>
-                  Buy and sell vehicles <br /> with trust
+                  Buy and sell your ArtWork <br /> with trust
                 </h1>
 
                 <br />
@@ -102,9 +104,9 @@ function Home() {
                 <div className="divider">{""}</div>
                 <div className="listings">
                   <div className="listing-header">
-                    <h2>Listed Vehicles</h2>
+                    <h2>Listed Artworkd</h2>
                     <Link className="do-list" href={"/listVehicle"}>
-                      <h2>List vehicle</h2>
+                      <h2>List Artwork</h2>
                     </Link>
                   </div>
                   <div className="listing-grid">
