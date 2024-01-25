@@ -1,16 +1,18 @@
 import { BrowserProvider } from "ethers";
 
-import VehicleDataABI from "../artifacts/contracts/VehicleData.sol/VehicleData.json";
-import VecFTABI from "../artifacts/contracts/VecFT.sol/VecFT.json";
+// import VehicleDataABI from "../artifacts/contracts/VehicleData.sol/VehicleData.json";
+// import VecFTABI from "../artifacts/contracts/VecFT.sol/VecFT.json";
 
+import VehicleData from "./VehicleData.json";
+import VecFT from "./VecFT.json";
 const vehicleData = {
   address: "0xabDbA0F0F2Fc6BF6Db0FF0dEd3331DDa1084D63D",
-  abi: VehicleDataABI.abi,
+  abi: VehicleData.abi,
 };
 
 const vecFT = {
   address: "0x796B070eE07F3224Ef964b4917F9EAb697e22e80",
-  abi: VecFTABI.abi,
+  abi: VecFT.abi,
 };
 
 async function getProvider() {

@@ -5,7 +5,6 @@ import { ethers, BrowserProvider, Contract } from "ethers";
 import dotenv from "dotenv";
 import Image from "next/image";
 import "./page.css";
-import VehicleDataABI from "../artifacts/contracts/VehicleData.sol/VehicleData.json";
 
 import {
   getAddress,
@@ -57,7 +56,7 @@ function Home() {
     const provider = await getProvider();
     const contract = new Contract(
       vehicleData.address,
-      VehicleDataABI.abi,
+      vehicleData.abi,
       provider
     );
     const result = await contract.getAllVehicles();
