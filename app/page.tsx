@@ -96,7 +96,7 @@ function Home() {
                 <h1>Revvek</h1>
                 <br />
                 <h1>
-                  Buy and sell your ArtWork <br /> with trust
+                  Buy and sell your Vehicle <br /> with trust
                 </h1>
 
                 <br />
@@ -104,9 +104,9 @@ function Home() {
                 <div className="divider">{""}</div>
                 <div className="listings">
                   <div className="listing-header">
-                    <h2>Listed Artworkd</h2>
+                    <h2>Listed Vehicled</h2>
                     <Link className="do-list" href={"/listVehicle"}>
-                      <h2>List Artwork</h2>
+                      <h2>List Vehicle</h2>
                     </Link>
                   </div>
                   <div className="listing-grid">
