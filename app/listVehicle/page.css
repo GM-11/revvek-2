@@ -1,0 +1,48 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  
+  .data {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: flex-start;
+  }
+  
+  input {
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+  
+    border: none;
+  }
+  
+  .img {
+    border-radius: 10px;
+  }
+  
+  .img-box {
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  button {
+    width: 100%;
+  }
+  
+  .message {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }

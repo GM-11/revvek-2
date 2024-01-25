@@ -1,0 +1,33 @@
+.b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  
+  .body > .img {
+    border-radius: 10px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  
+  .message {
+    height: 100%;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  p {
+    font-size: 1rem;
+  }
+  

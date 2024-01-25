@@ -1,0 +1,14 @@
+nav{
+    position: sticky;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    backdrop-filter: blur(10px); /* This creates the frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: bold;
+    border-radius: 10px;
+}

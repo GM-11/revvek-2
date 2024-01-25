@@ -1,0 +1,96 @@
+.main {
+    padding: 1rem;
+    background: linear-gradient(
+      0,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(41, 2, 11, 1) 52%,
+      rgba(105, 6, 8, 1) 100%
+    );
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* This creates the frosted glass effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid white;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .divider {
+    width: 70rem;
+    height: 1px;
+    background-color: white;
+    margin: 2rem;
+  }
+  
+  .labels {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* justify-content; */
+  }
+  .listing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 60rem;
+    padding: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  .listings {
+    display: flex;
+    justify-content: center;
+  
+    padding: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* This creates the frosted glass effect */
+    border-radius: 10px;
+  }
+  .img {
+    border-radius: 10px;
+  }
+  
+  .do-list {
+    text-decoration: none;
+  }
+  
+  .listing-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
