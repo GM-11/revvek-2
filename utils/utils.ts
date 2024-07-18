@@ -6,12 +6,12 @@ import { BrowserProvider } from "ethers";
 import VehicleData from "./VehicleData.json";
 import VecFT from "./VecFT.json";
 const vehicleData = {
-  address: "0xabDbA0F0F2Fc6BF6Db0FF0dEd3331DDa1084D63D",
+  address: "0x6DC9007478B66257998EB68cDb89A01f5bb9Beb4",
   abi: VehicleData.abi,
 };
 
 const vecFT = {
-  address: "0x796B070eE07F3224Ef964b4917F9EAb697e22e80",
+  address: "0xfD5F3432f18ebe9511152ADfDb083454075DAcF7",
   abi: VecFT.abi,
 };
 

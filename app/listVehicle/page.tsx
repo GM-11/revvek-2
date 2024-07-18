@@ -45,6 +45,25 @@ function Home() {
   useEffect(() => {
     async function load() {
       const address = await getAddress();
+
+      window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            chainId: "0xaa36a7",
+            rpcUrls: [
+              "https://eth-sepolia.g.alchemy.com/v2/MvHvfT5YNsOuQ9qP6guB3qeiDbdpOjUc",
+            ],
+            chainName: "Ethereum Sepolia",
+            nativeCurrency: {
+              name: "ETH",
+              symbol: "ETH",
+              decimals: 18,
+            },
+            // blockExplorerUrls: ["https://polygonscan.com/"],
+          },
+        ],
+      });
       setAddress(address);
     }
     load();
@@ -64,8 +83,8 @@ function Home() {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `8e47753f1e470dbd3e27`,
-            pinata_secret_api_key: `c48e999098cb1f5f123744bb05125966b08980b6c3d4e8f3662955c60f866e82`,
+            pinata_api_key: `${process.env.NEXT_PUBLIC_PINATA_API_KEY}`,
+            pinata_secret_api_key: `${process.env.NEXT_PUBLIC_SECRET_KEY}`,
             "Content-Type": "multipart/form-data",
           },
         });

@@ -44,6 +44,23 @@ function Home() {
       const signer = await getSigner();
       const address = await getAddress();
 
+      window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            chainId: "80002",
+            rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/MvHvfT5YNsOuQ9qP6guB3qeiDbdpOjUc"],
+            chainName: "Ethereum Sepolia",
+            nativeCurrency: {
+              name: "ETH",
+              symbol: "ETH",
+              decimals: 18,
+            },
+            // blockExplorerUrls: ["https://polygonscan.com/"],
+          },
+        ],
+      });
+
       setProvider(provider);
       setSigner(signer);
       setAddress(address);

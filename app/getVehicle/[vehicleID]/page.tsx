@@ -47,12 +47,31 @@ function Home() {
         brand: element[1],
         model: element[2],
         imageLink: element[6],
-        price: parseInt(element[3]) + 0.003,
+        price: parseInt(element[3]) + 1,
         sellerType: parseInt(element[4]) as SellerType,
         owner: element[5],
       } as VehicleData;
 
-      console.log(vehicle);
+      window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            chainId: "0xaa36a7",
+            rpcUrls: [
+              "https://eth-sepolia.g.alchemy.com/v2/MvHvfT5YNsOuQ9qP6guB3qeiDbdpOjUc",
+            ],
+            chainName: "Ethereum Sepolia",
+            nativeCurrency: {
+              name: "ETH",
+              symbol: "ETH",
+              decimals: 18,
+            },
+            // blockExplorerUrls: ["https://polygonscan.com/"],
+          },
+        ],
+      });
+
+      console.log(element);
       setVehicle(vehicle);
     },
     [params.vehicleID]
@@ -85,10 +104,10 @@ function Home() {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: metadata,
         headers: {
-          pinata_api_key: `8e47753f1e470dbd3e27`,
-          pinata_secret_api_key: `c48e999098cb1f5f123744bb05125966b08980b6c3d4e8f3662955c60f866e82`,
-          "Content-Type": "application/json",
-        },
+          pinata_api_key: `${process.env.NEXT_PUBLIC_PINATA_API_KEY}`,
+          pinata_secret_api_key: `${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+          "Content-Type": "multipart/form-data",
+      },
       });
 
       const metadataHash = uploadMetadata.data.IpfsHash;
@@ -153,7 +172,7 @@ function Home() {
           </div>
           <div className="content">
             <h2>
-              Price: <strong>{vehicle.price}</strong> MATIC
+              Price: <strong>{vehicle.price}</strong> ETH
             </h2>
             <br />
             <p>
