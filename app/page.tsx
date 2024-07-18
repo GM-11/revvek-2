@@ -49,7 +49,9 @@ function Home() {
         params: [
           {
             chainId: "80002",
-            rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/MvHvfT5YNsOuQ9qP6guB3qeiDbdpOjUc"],
+            rpcUrls: [
+              "https://eth-sepolia.g.alchemy.com/v2/MvHvfT5YNsOuQ9qP6guB3qeiDbdpOjUc",
+            ],
             chainName: "Ethereum Sepolia",
             nativeCurrency: {
               name: "ETH",
@@ -108,6 +110,11 @@ function Home() {
           ) : (
             <>
               <Navbar address={address} />
+
+              <p>
+                Please make sure to be on{" "}
+                <strong>Ethereum Sepolia Network</strong>
+              </p>
 
               <div className="body">
                 <h1>Revvek</h1>
